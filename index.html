@@ -33,17 +33,23 @@
 
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a class="nav-link active" href="index.html">Home</a>
+
         <div class="nav-dropdown">
           <button class="nav-link dropdown-trigger" type="button" aria-expanded="false">
-            Collections <span class="chevron">⌄</span>
+            Shop <span class="chevron">⌄</span>
           </button>
+
           <div class="dropdown-menu">
             <a href="pages/bags.html">Bags</a>
             <a href="pages/jewelry.html">Jewelry</a>
             <a href="pages/sarees.html">Sarees</a>
             <a href="pages/clothing.html">Clothing</a>
+            <a href="pages/handpicked-finds.html">Handpicked Finds</a>
           </div>
         </div>
+
+        <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+        <a class="nav-link" href="#best-sellers">Best Sellers</a>
         <a class="nav-link" href="pages/about.html">About</a>
         <a class="nav-link" href="pages/contact.html">Contact</a>
       </nav>
@@ -60,17 +66,24 @@
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <nav aria-label="Mobile navigation">
         <a href="index.html">Home</a>
+
         <button class="mobile-collections-toggle" id="mobileCollectionsToggle" type="button" aria-expanded="false">
-          Collections <span>+</span>
+          Shop <span>+</span>
         </button>
+
         <div class="mobile-submenu" id="mobileSubmenu">
           <a href="pages/bags.html">Bags</a>
           <a href="pages/jewelry.html">Jewelry</a>
           <a href="pages/sarees.html">Sarees</a>
           <a href="pages/clothing.html">Clothing</a>
+          <a href="pages/handpicked-finds.html">Handpicked Finds</a>
         </div>
+
+        <a href="#new-arrivals">New Arrivals</a>
+        <a href="#best-sellers">Best Sellers</a>
         <a href="pages/about.html">About</a>
         <a href="pages/contact.html">Contact</a>
+
         <div class="mobile-socials">
           <a href="https://www.instagram.com/shokher_alna_usa/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.facebook.com/ShokherAlnaUsa" target="_blank" rel="noopener">Facebook</a>
@@ -159,12 +172,127 @@
       </div>
     </section>
 
-    <section class="section-placeholder" id="collections" aria-label="Upcoming collections section">
-      <div>
-        <p class="eyebrow">Next section</p>
-        <h2>Featured collections will be built in Step 4.</h2>
+    <section class="featured-collections" id="collections" aria-labelledby="collections-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Shop by category</p>
+            <h2 id="collections-title">Featured Collections</h2>
+          </div>
+
+          <p class="section-intro">
+            Explore thoughtfully selected pieces across our signature categories.
+            Real product photography will be added later without changing this layout.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <a class="collection-card collection-card-large" href="pages/bags.html">
+            <div class="collection-image collection-image-bags" aria-hidden="true">
+              <span class="collection-placeholder-label">Bags image</span>
+            </div>
+
+            <div class="collection-content">
+              <span class="collection-number">01</span>
+              <div>
+                <h3>Bags</h3>
+                <p>Statement pieces for celebrations, gifting, and everyday elegance.</p>
+              </div>
+              <span class="collection-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a class="collection-card" href="pages/jewelry.html">
+            <div class="collection-image collection-image-jewelry" aria-hidden="true">
+              <span class="collection-placeholder-label">Jewelry image</span>
+            </div>
+
+            <div class="collection-content">
+              <span class="collection-number">02</span>
+              <div>
+                <h3>Jewelry</h3>
+                <p>Elegant accents designed to complete every look.</p>
+              </div>
+              <span class="collection-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a class="collection-card" href="pages/sarees.html">
+            <div class="collection-image collection-image-sarees" aria-hidden="true">
+              <span class="collection-placeholder-label">Sarees image</span>
+            </div>
+
+            <div class="collection-content">
+              <span class="collection-number">03</span>
+              <div>
+                <h3>Sarees</h3>
+                <p>Timeless drapes selected for graceful occasions.</p>
+              </div>
+              <span class="collection-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+          <a class="collection-card collection-card-wide" href="pages/clothing.html">
+            <div class="collection-image collection-image-clothing" aria-hidden="true">
+              <span class="collection-placeholder-label">Clothing image</span>
+            </div>
+
+            <div class="collection-content">
+              <span class="collection-number">04</span>
+              <div>
+                <h3>Clothing</h3>
+                <p>Versatile styles chosen for comfort, character, and refined dressing.</p>
+              </div>
+              <span class="collection-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        </div>
+
+
+          <a class="collection-card collection-card-handpicked" href="pages/handpicked-finds.html">
+            <div class="collection-image collection-image-handpicked" aria-hidden="true">
+              <span class="collection-placeholder-label">Handpicked Finds image</span>
+            </div>
+
+            <div class="collection-content">
+              <span class="collection-number">05</span>
+              <div>
+                <h3>Handpicked Finds</h3>
+                <p>Unique pieces, seasonal discoveries, and special additions beyond our main categories.</p>
+              </div>
+              <span class="collection-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+
+        <div class="collections-footer">
+          <p>
+            Looking for something specific? Browse every category or message us for help.
+          </p>
+
+          <a class="text-link" href="pages/contact.html">
+            Contact Shokher Alna
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
+  
+    <section class="upcoming-home-section" id="best-sellers">
+      <div class="section-shell upcoming-home-inner">
+        <p class="eyebrow">Coming next</p>
+        <h2>Best Sellers</h2>
+        <p>Our most-loved pieces will appear here.</p>
+      </div>
+    </section>
+
+    <section class="upcoming-home-section upcoming-home-section-alt" id="new-arrivals">
+      <div class="section-shell upcoming-home-inner">
+        <p class="eyebrow">Coming soon</p>
+        <h2>New Arrivals</h2>
+        <p>Fresh additions to the Shokher Alna collection will appear here.</p>
+      </div>
+    </section>
+
   </main>
 
   <script src="script.js"></script>

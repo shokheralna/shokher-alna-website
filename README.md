@@ -18,3 +18,21 @@
 - Shipping, pickup, and WhatsApp benefits
 - Hero image placeholder for later product photography
 - Responsive desktop, tablet, and mobile layouts
+
+
+## Step 4 completed
+- Featured Collections section
+- Bags, Jewelry, Sarees, and Clothing cards
+- Elegant image placeholders for later photography
+- Responsive category grid
+- Hover and focus interactions
+- Links to all category pages
+
+
+## Step 5 completed
+- Navigation changed from Collections to Shop
+- Added New Arrivals and Best Sellers navigation links
+- Added Handpicked Finds to desktop and mobile menus
+- Added Handpicked Finds collection card
+- Added Handpicked Finds page placeholder
+- Added anchors for upcoming Best Sellers and New Arrivals sections
