@@ -7,7 +7,7 @@
 - Collections dropdown
 - Instagram and Facebook links
 - Working mobile menu
-- Sticky header behavior
+- Sticky header behavior.
 
 
 ## Step 3 completed
