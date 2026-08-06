@@ -757,3 +757,28 @@
 .empty-product-message[hidden] {
   display: none;
 }
+
+/* Category pages */
+.category-hero {
+  padding: 90px 0 60px;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
+}
+
+.category-hero h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 1;
+}
+
+.category-hero p:last-child {
+  max-width: 660px;
+  margin: 20px 0 0;
+  color: var(--muted);
+}
+
+.category-products {
+  padding: 72px 0 110px;
+  background: var(--paper);
+}
