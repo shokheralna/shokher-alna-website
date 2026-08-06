@@ -36,3 +36,25 @@
 - Added Handpicked Finds collection card
 - Added Handpicked Finds page placeholder
 - Added anchors for upcoming Best Sellers and New Arrivals sections
+
+
+## Step 6 completed
+- Best Sellers section
+- Four reusable product card templates
+- Product badges, category labels, and price areas
+- WhatsApp ordering link for Guzrati Metal Bag
+- Responsive product grid
+- Placeholder-ready product image areas
+
+
+## Product System Version 1
+- Category-based image folders
+- Central product database
+- Product visibility status
+- Automatic Best Sellers rendering
+- Automatic New Arrivals rendering
+- Image fallback when `main.jpg` is missing
+- Product-specific WhatsApp order message
+- Central Facebook and Instagram settings
+
+See `PRODUCT-MANAGEMENT-GUIDE.md` for instructions.

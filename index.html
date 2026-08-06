@@ -277,24 +277,50 @@
       </div>
     </section>
   
-    <section class="upcoming-home-section" id="best-sellers">
-      <div class="section-shell upcoming-home-inner">
-        <p class="eyebrow">Coming next</p>
-        <h2>Best Sellers</h2>
-        <p>Our most-loved pieces will appear here.</p>
+    <section class="best-sellers" id="best-sellers" aria-labelledby="best-sellers-title">
+      <div class="section-shell">
+        <div class="section-heading best-sellers-heading">
+          <div>
+            <p class="eyebrow">Customer favorites</p>
+            <h2 id="best-sellers-title">Best Sellers</h2>
+          </div>
+          <p class="section-intro">
+            A curated selection of the pieces customers return to most.
+          </p>
+        </div>
+
+        <div class="product-grid" id="bestSellersGrid"></div>
+
+        <div class="empty-product-message" id="bestSellersEmpty" hidden>
+          Best sellers will appear here once products are marked as active and bestSeller.
+        </div>
       </div>
     </section>
 
-    <section class="upcoming-home-section upcoming-home-section-alt" id="new-arrivals">
-      <div class="section-shell upcoming-home-inner">
-        <p class="eyebrow">Coming soon</p>
-        <h2>New Arrivals</h2>
-        <p>Fresh additions to the Shokher Alna collection will appear here.</p>
+    <section class="new-arrivals" id="new-arrivals" aria-labelledby="new-arrivals-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Freshly added</p>
+            <h2 id="new-arrivals-title">New Arrivals</h2>
+          </div>
+          <p class="section-intro">
+            Discover the newest additions to the Shokher Alna collection.
+          </p>
+        </div>
+
+        <div class="product-grid" id="newArrivalsGrid"></div>
+
+        <div class="empty-product-message" id="newArrivalsEmpty" hidden>
+          New arrivals will appear here once products are marked as active and newArrival.
+        </div>
       </div>
     </section>
 
   </main>
 
+  <script src="data/config.js"></script>
+  <script src="data/products.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
