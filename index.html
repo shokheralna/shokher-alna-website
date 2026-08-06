@@ -3,14 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shokher Alna</title>
+  <meta name="description" content="Shokher Alna — traditional and elegant fashion, thoughtfully curated.">
+  <title>Shokher Alna | Traditional & Elegant Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Shokher Alna</h1>
-    <p>Website foundation created successfully.</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <span>Free shipping on orders over $100</span>
+      <span class="announcement-divider">•</span>
+      <span>Free local pickup in Jackson Heights</span>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a class="brand" href="index.html" aria-label="Shokher Alna home">
+        <span class="brand-mark">SA</span>
+        <span class="brand-copy">
+          <strong>Shokher Alna</strong>
+          <small>Traditional &amp; Elegant Fashion</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-trigger" type="button" aria-expanded="false">
+            Collections <span class="chevron">⌄</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="pages/bags.html">Bags</a>
+            <a href="pages/jewelry.html">Jewelry</a>
+            <a href="pages/sarees.html">Sarees</a>
+            <a href="pages/clothing.html">Clothing</a>
+          </div>
+        </div>
+        <a class="nav-link" href="pages/about.html">About</a>
+        <a class="nav-link" href="pages/contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="social-link" href="https://www.instagram.com/shokher_alna_usa/" target="_blank" rel="noopener">Instagram</a>
+        <a class="social-link" href="https://www.facebook.com/ShokherAlnaUsa" target="_blank" rel="noopener">Facebook</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <button class="mobile-collections-toggle" id="mobileCollectionsToggle" type="button" aria-expanded="false">
+          Collections <span>+</span>
+        </button>
+        <div class="mobile-submenu" id="mobileSubmenu">
+          <a href="pages/bags.html">Bags</a>
+          <a href="pages/jewelry.html">Jewelry</a>
+          <a href="pages/sarees.html">Sarees</a>
+          <a href="pages/clothing.html">Clothing</a>
+        </div>
+        <a href="pages/about.html">About</a>
+        <a href="pages/contact.html">Contact</a>
+        <div class="mobile-socials">
+          <a href="https://www.instagram.com/shokher_alna_usa/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/ShokherAlnaUsa" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="step-preview">
+      <div>
+        <p class="eyebrow">Website foundation</p>
+        <h1>Navigation is ready.</h1>
+        <p>The announcement strip, permanent navigation, logo area, social links, and mobile menu are now working.</p>
+      </div>
+    </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>

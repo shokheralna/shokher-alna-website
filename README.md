@@ -1,8 +1,10 @@
 # Shokher Alna Website
 
-Free GitHub Pages website for Shokher Alna.
-
-## Business details
-- Free shipping on orders over $100
-- Free local pickup in Jackson Heights
-- Primary ordering method: WhatsApp
+## Step 2 completed
+- Announcement strip
+- Permanent desktop navigation
+- Text-based logo area
+- Collections dropdown
+- Instagram and Facebook links
+- Working mobile menu
+- Sticky header behavior
