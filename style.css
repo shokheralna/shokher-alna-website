@@ -782,3 +782,43 @@
   padding: 72px 0 110px;
   background: var(--paper);
 }
+
+/* =========================================
+   Real Shokher Alna logo
+   ========================================= */
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+
+/* =========================================
+   Homepage hero image
+   ========================================= */
+
+.hero-main-image {
+  width: 100%;
+  height: 505px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-image-card {
+  overflow: hidden;
+}
+
+@media (max-width: 680px) {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero-main-image {
+    height: 430px;
+  }
+}
