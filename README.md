@@ -6,7 +6,7 @@
 - Text-based logo area
 - Collections dropdown
 - Instagram and Facebook links
-- Working mobile menu
+- Working mobile menu.
 - Sticky header behavior.
 
 
