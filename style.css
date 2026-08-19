@@ -1177,3 +1177,65 @@
     border-radius: 16px;
   }
 }
+
+/* ============================================================
+   HERO IMAGE - LARGE RIGHT-SIDE FOCUS
+   ============================================================ */
+
+/* Give the image side more space */
+.hero-container {
+  grid-template-columns: 0.68fr 1.32fr;
+  gap: 40px;
+  min-height: 760px;
+  align-items: center;
+}
+
+/* Right-side hero area */
+.hero-visual {
+  width: 100%;
+  min-height: 740px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Make the actual hero image much larger */
+.hero-main-image {
+  width: min(100%, 760px);
+  height: auto;
+  max-width: none;
+  display: block;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* Slightly reduce the left headline so image gets more focus */
+.hero h1 {
+  font-size: clamp(3.7rem, 5.6vw, 6rem);
+  line-height: 0.97;
+}
+
+/* Tablet/mobile */
+@media (max-width: 980px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  .hero-main-image {
+    width: min(100%, 700px);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-main-image {
+    width: 100%;
+  }
+}
