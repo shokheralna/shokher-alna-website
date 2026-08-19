@@ -191,7 +191,7 @@ window.SHOKHER_ALNA_PRODUCTS = [
     "category": "bags",
     "folder": "assets/products/bags/B006-Patchwork-Hut",
     "price": "70",
-    "status": "Active",
+    "status": "active",
     "featured": false,
     "bestSeller": true,
     "newArrival": false,
