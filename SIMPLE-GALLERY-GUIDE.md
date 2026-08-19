@@ -1,47 +1,38 @@
-# Shokher Alna — Simple Product Gallery
+# Shokher Alna Simple Gallery Guide
 
-Each product uses ONE folder only.
+## Current design
+The product page shows one large focused image with thumbnails underneath. Clicking a thumbnail changes the focused image. The selected image can be enlarged, and the enlarged viewer supports moving through the product photographs.
 
-Example:
+## Required structure
 
-assets/products/bags/B030-Guzrati-Metal-Bag/
-  main.jpg
-  gallery/
+    Product-Folder/
+        main.jpg
+        gallery/
+            01.jpg
+            02.jpg
+            03.jpg
+            04.jpg
+
+`main.jpg` is the primary catalog image.
+
+Additional photographs use two-digit sequential names:
+
     01.jpg
     02.jpg
     03.jpg
-    04.jpg
-    05.jpg
-    ...
-    20.jpg
 
-## Rules
+The automatic system currently checks up to 20 numbered gallery images.
 
-- `main.jpg` = the main product image shown on product cards.
-- `gallery/01.jpg`, `02.jpg`, etc. = all other photos.
-- Different colors, shapes, angles, backs, close-ups, and lifestyle photos can all go in the same gallery.
-- You do NOT need a `variants` folder.
-- You do NOT need to list each gallery image in `products.js`.
-- The website checks automatically for `01.jpg` through `20.jpg`.
-- If you have only 6 gallery photos, upload `01.jpg` through `06.jpg` and stop there.
+## Multiple versions
+Different colors/shapes belonging to the same listing can simply be added as gallery photographs. No separate variants folder is needed.
 
-## Example for one product with multiple colors
+## Photography
+For a cleaner storefront:
+- Keep backgrounds consistent.
+- Leave space around the product.
+- Show the whole item in the primary photo.
+- Use later images for details and alternative versions.
+- Avoid cutting off bag chains, jewelry or product edges.
 
-main.jpg          -> best overall image
-gallery/01.jpg    -> red version front
-gallery/02.jpg    -> red version back
-gallery/03.jpg    -> green version front
-gallery/04.jpg    -> green version back
-gallery/05.jpg    -> another shape
-gallery/06.jpg    -> close-up detail
-
-The customer can click any thumbnail to switch the large image.
-
-## WhatsApp
-
-The order message includes:
-- product name
-- price
-- product page link
-
-If the customer wants a particular version shown in the gallery, they can mention the photo number.
+## Gallery troubleshooting
+Verify the product folder path, `gallery` spelling, two-digit filename, `.jpg` extension, capitalization, GitHub Pages deployment and browser cache.
