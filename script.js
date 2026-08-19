@@ -130,3 +130,159 @@ document.addEventListener("DOMContentLoaded", () => {
     if (config.facebookUrl) link.href = config.facebookUrl;
   });
 });
+
+
+// =====================================================
+// Homepage collection card automatic slideshows
+// Uses main.jpg from visible products in each category.
+// =====================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const products = window.SHOKHER_ALNA_PRODUCTS || [];
+
+  const visibleProducts = products.filter(
+    (product) =>
+      product.status === "active" ||
+      product.status === "out-of-stock"
+  );
+
+  const collectionTargets = [
+    {
+      category: "bags",
+      selector: ".collection-image-bags"
+    },
+    {
+      category: "jewelry",
+      selector: ".collection-image-jewelry"
+    },
+    {
+      category: "sarees",
+      selector: ".collection-image-sarees"
+    },
+    {
+      category: "clothing",
+      selector: ".collection-image-clothing"
+    },
+    {
+      category: "handpicked-finds",
+      selector: ".collection-image-handpicked"
+    }
+  ];
+
+  function imageExists(src) {
+    return new Promise((resolve) => {
+      const img = new Image();
+
+      img.onload = () => resolve(src);
+      img.onerror = () => resolve(null);
+
+      img.src = src;
+    });
+  }
+
+  async function buildCollectionSlideshow({
+    category,
+    selector
+  }) {
+    const container =
+      document.querySelector(selector);
+
+    if (!container) return;
+
+    const matchingProducts =
+      visibleProducts.filter(
+        (product) =>
+          product.category === category
+      );
+
+    if (!matchingProducts.length) return;
+
+    const checks = matchingProducts.map(
+      (product) =>
+        imageExists(
+          `${product.folder}/main.jpg`
+        )
+    );
+
+    const results =
+      await Promise.all(checks);
+
+    const images =
+      results.filter(Boolean);
+
+    if (!images.length) return;
+
+    // Remove placeholder label only after at least
+    // one real image has been found.
+    container
+      .querySelectorAll(
+        ".collection-placeholder-label"
+      )
+      .forEach((label) => label.remove());
+
+    container.classList.add(
+      "collection-slideshow"
+    );
+
+    const firstImage =
+      document.createElement("img");
+
+    firstImage.className =
+      "collection-slide active";
+
+    firstImage.src = images[0];
+    firstImage.alt = "";
+
+    container.appendChild(firstImage);
+
+    // One image means no slideshow is needed.
+    if (images.length === 1) return;
+
+    const secondImage =
+      document.createElement("img");
+
+    secondImage.className =
+      "collection-slide";
+
+    secondImage.src = images[1];
+    secondImage.alt = "";
+
+    container.appendChild(secondImage);
+
+    let currentIndex = 0;
+    let showingFirst = true;
+
+    window.setInterval(() => {
+      const nextIndex =
+        (currentIndex + 1) %
+        images.length;
+
+      const visibleImage =
+        showingFirst
+          ? firstImage
+          : secondImage;
+
+      const hiddenImage =
+        showingFirst
+          ? secondImage
+          : firstImage;
+
+      hiddenImage.src =
+        images[nextIndex];
+
+      hiddenImage.classList.add(
+        "active"
+      );
+
+      visibleImage.classList.remove(
+        "active"
+      );
+
+      currentIndex = nextIndex;
+      showingFirst = !showingFirst;
+    }, 3800);
+  }
+
+  collectionTargets.forEach(
+    buildCollectionSlideshow
+  );
+});
