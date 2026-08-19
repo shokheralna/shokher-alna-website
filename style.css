@@ -1011,3 +1011,96 @@
     transform: none;
   }
 }
+
+
+/* ============================================================
+   FEATURED COLLECTIONS - CLEAN BALANCED LAYOUT
+   ============================================================ */
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Make Bags, Jewelry, Sarees and Clothing equal */
+.collection-card,
+.collection-card-large,
+.collection-card-wide {
+  grid-column: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Same image area for every normal collection card */
+.collection-image,
+.collection-card-large .collection-image,
+.collection-card-wide .collection-image {
+  width: 100%;
+  height: 340px;
+  min-height: 340px;
+  padding: 0;
+}
+
+/* Same content area */
+.collection-card-wide .collection-content {
+  min-height: 150px;
+  align-content: start;
+}
+
+/* Slideshow images - show the FULL product */
+.collection-image .collection-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+  padding: 18px;
+  background: #f3eee6;
+}
+
+/* Handpicked Finds stays full width */
+.collection-card-handpicked {
+  width: 100%;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.collection-card-handpicked .collection-image {
+  height: 340px;
+  min-height: 340px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card,
+  .collection-card-large,
+  .collection-card-wide,
+  .collection-card-handpicked {
+    display: flex;
+    width: 100%;
+  }
+
+  .collection-image,
+  .collection-card-large .collection-image,
+  .collection-card-wide .collection-image,
+  .collection-card-handpicked .collection-image {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .collection-image .collection-slide {
+    padding: 12px;
+  }
+}
